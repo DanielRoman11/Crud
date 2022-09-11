@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD | Daniel Román</title>
+    <link rel="stylesheet" type="text/css" href="public/styles.css" />
+    <script defer type="text/javascript" src="index.js" ></script>
+</head>
+<body>
+    <nav id="navegador">
+        <ul>
+            <li><a id="c" href="#crear">C</a></li>
+            <li><a id="r" href="#leer">R</a></li>
+            <li><a id="u" href="#actualizar">U</a></li>
+            <li><a id="d" href="#eliminar">D</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <form action="#" class="grid" >
+            <fieldset id="crear" class="formulario">
+                <legend>CREAR</legend>
+                <label class="label-text" for="firts-name">Nombre: </label><input class="input-f" id="firts-name" name="firts-name" type="text" placeholder="Ingrese su nombre" required pattern="[A-Za-z\u00d1\u00f1À-ÿ ]{3,14}" />
+                <label class="label-text" for="last-name">Apellido: </label> <input class="input-f" id="last-name" name="last-name" type="text" placeholder="Ingrese su apellido" required pattern="[A-Za-z\u00d1\u00f1À-ÿ ]{3,20}" />
+                <label class="label-text" for="age">Edad: </label> <input class="input-f" id="age" name="age" type="text" placeholder="Ingrese su edad" required pattern="[0-9]{1,2}" />
+                <label class="label-text" for="email">Correo: </label> <input class="input-f" id="email" name="email" type="email" placeholder="Ingrese su correo" required/>
+                <input type="submit" value="Guardar">
+            </fieldset>
+        </form>
+        <fieldset id="leer">
+            <legend>LEER</legend>
+            <table id="tabla-lectura">
+
+            </table>
+        </fieldset>
+        <form action="#">
+            <fieldset id="actualizar" class="formulario">
+                <legend>ACTUALIZAR</legend>
+                <div class="formulario">
+                    <label class="label-text" for="id">Id: <input class="input-f" type="text" disabled /></label>
+                    <label class="label-text" for="firts-name">Nombre: <input class="input-f" type="text" disabled /></label>
+                    <label class="label-text" for="last-name">Apellido: <input class="input-f" type="text" disabled /></label>
+                    <label class="label-text" for="email">Correo: <input class="input-f" type="text" disabled/></label>
+                    <input class="btn-actualizar" type="submit" value="Editar" />
+                </div>
+                <div>
+
+                </div>
+                
+
+                <input class="btn-actualizar" type="submit" value="Guardar" />
+            </fieldset>
+        </form>
+        <form>
+            <fieldset id="eliminar">
+                <legend>ELIMINAR</legend>
+                <label for="por-id">Buscar por ID: <input id="por-id" name="por-id" type="text" pattern="[0-9]"/></label>
+                <label for="por-nombre">Buscar por nombre: <input id="por-nombre" name="por-nombre" type="text" pattern="[A-Za-z\u00d1\u00f1À-ÿ ]{3,14}" /></label>
+                <input type="submit" value="Buscar" />
+            </fieldset>
+        </form>
+        
+    </div>
+</body>
+</html>
